@@ -8,7 +8,7 @@ app = FastAPI(title="Fridge Settings API")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with specific origins
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -99,7 +99,7 @@ def get_settings(
     if max_value is not None:
         filtered_data = [item for item in filtered_data if item["applied_value"] <= max_value]
     
-    # Add formatted date for display purposes
+    # Formatting the data for display purposes
     result = {"data": []}
     for item in filtered_data:
         entry = item.copy()
@@ -113,7 +113,7 @@ def get_stats():
     """Get statistics about the settings data."""
     data = SETTINGS_DATA["data"]
     
-    # Calculate unique values
+    # Calculating unique values
     unique_fridges = len(set(item["fridge_id"] for item in data))
     unique_instruments = len(set(item["instrument_name"] for item in data))
     unique_parameters = len(set(item["parameter_name"] for item in data))
