@@ -1,0 +1,15 @@
+{
+  "name": "fridge-settings-dashboard-project",
+  "version": "1.0.0",
+  "description": "A modern web application for viewing and filtering instrument parameter settings across different fridges",
+  "scripts": {
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && python -m uvicorn main:app --reload",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "install:all": "npm install && cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
