@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Node
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+
+# Editor
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
