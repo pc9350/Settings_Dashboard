@@ -50,7 +50,7 @@ const Layout = () => {
               </nav>
               
               <a
-                href="https://github.com/yourusername/fridge-settings-dashboard"
+                href="https://github.com/pc9350/Settings_Dashboard.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-200"
